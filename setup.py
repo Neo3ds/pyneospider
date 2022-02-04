@@ -1,11 +1,9 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
-with open('readMe.md', 'r', encoding='utf-8') as fh:
-    long_description = fh.read()
 
 setup(
     name                            = 'pyneospider',
-    version                         = '0.0.1',
+    version                         = '0.0.1a',
     description                     = 'python NeoSpider library',
     long_description                = long_description,
     long_description_content_type   = 'text/markdown',
@@ -14,7 +12,7 @@ setup(
     author_email                    = 'jtj0525@gmail.com',
     install_requires                = ['pyserial'],
     license                         = 'MIT',
-    packages                        = ['pyneospider'],
+    packages                        = find_packages(),
     zip_safe                        = False,
     classifiers                     = [
         "Programming Language :: Python :: 3",
