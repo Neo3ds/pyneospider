@@ -1,9 +1,11 @@
 from setuptools import setup, find_packages
 
+with open('readMe.md', 'r', encoding='utf-8') as fh:
+    long_description = fh.read()
 
 setup(
     name                            = 'pyneospider',
-    version                         = '0.0.1a',
+    version                         = '0.0.1',
     description                     = 'python NeoSpider library',
     long_description                = long_description,
     long_description_content_type   = 'text/markdown',
