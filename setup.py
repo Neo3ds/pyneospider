@@ -5,7 +5,7 @@ with open('readMe.md', 'r', encoding='utf-8') as fh:
 
 setup(
     name                            = 'pyneospider',
-    version                         = '0.0.2',
+    version                         = '0.0.3',
     description                     = 'python NeoSpider library',
     long_description                = long_description,
     long_description_content_type   = 'text/markdown',

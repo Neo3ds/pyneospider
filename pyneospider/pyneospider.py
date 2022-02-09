@@ -90,6 +90,24 @@ class NeoSpider:
         self.__data_list[6][0] = 0
         self.__write_data()
 
+    def move_secs(self, direct: int, secs: float):
+        """
+        : 네오스파이더 이동 secs
+        @params: direct -> int, secs -> float
+        0: Stop, 정지
+        1: Front, 앞으로
+        2: Left, 왼쪽으로
+        3: Right, 오른쪽으로
+        4: Backward, 뒤로
+        ex) move(1, 3) -> 앞으로 3초간 이동
+        """
+        direct = int(direct) if 0 < direct < 5 else 0
+        self.__data_list[6][0] = direct
+        self.__write_data()
+        time.sleep(secs)
+        self.__data_list[6][0] = 0
+        self.__write_data()
+
     def tone(self, octave: int, note: str, duration: float):
         """
         : 음계 소리내기
