@@ -99,7 +99,7 @@ class NeoSpider:
         2: Left, 왼쪽으로
         3: Right, 오른쪽으로
         4: Backward, 뒤로
-        ex) move(1, 3) -> 앞으로 3초간 이동
+        ex) move_secs(1, 3) -> 앞으로 3초간 이동
         """
         direct = int(direct) if 0 < direct < 5 else 0
         self.__data_list[6][0] = direct
@@ -194,7 +194,7 @@ class NeoSpider:
         """
         angle = max(angle, 50)
         angle = min(angle, 130)
-        self.__data_list[7] = angle
+        self.__data_list[7][0] = angle
         self.__write_data()
 
     def __check_sum(self, check_list):
@@ -275,7 +275,6 @@ class NeoSpider:
         : 가스 센서값 가져오기
         @return __gas_value
         """
-        # print(self.__gas_value)
         return self.__gas_value
 
     def get_cds_sensor(self):
@@ -283,7 +282,6 @@ class NeoSpider:
         : 조도(CDS) 센서값 가져오기
         @return __cds_value
         """
-        # print(self.__cds_value)
         return self.__cds_value
 
     def get_temp_sensor(self):
@@ -291,7 +289,6 @@ class NeoSpider:
         : 온도 센서값 가져오기
         @return __temp_value
         """
-        # print(self.__temp_value)
         return self.__temp_value
 
     def get_vibe_sensor(self):
@@ -299,7 +296,6 @@ class NeoSpider:
         : 진동 센서값 가져오기
         @return __vibe_value
         """
-        # print(self.__vibe_value)
         return self.__vibe_value
 
     def get_input_sensor(self):
@@ -307,23 +303,20 @@ class NeoSpider:
         : 외부 센서값 가져오기
         @return __gas_value
         """
-        # print(self.__gas_value)
         return self.__gas_value
 
-    def get_left_infared(self):
+    def get_left_infrared(self):
         """
         : 왼쪽 적외선 센서값 가져오기
         @return __left_inf_value
         """
-        # print(self.__left_inf_value)
         return self.__left_inf_value
 
-    def get_right_infared(self):
+    def get_right_infrared(self):
         """
         : 오른쪽 적외선 센서값 가져오기
         @return __right_inf_value
         """
-        # print(self.__right_inf_value)
         return self.__right_inf_value
 
     def get_ultrasonic(self):
@@ -333,7 +326,6 @@ class NeoSpider:
         """
         self.__data_list[4][0] = 1
         self.__write_data()
-        # print(round(self.__ultrasonic_value, 2))
         return round(self.__ultrasonic_value, 2)
 
     def get_motion(self):
@@ -343,7 +335,6 @@ class NeoSpider:
         """
         self.__data_list[5][0] = 1
         self.__write_data()
-        # print(self.__motion_value)
         return self.__motion_value
     
     def close(self):
