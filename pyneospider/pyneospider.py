@@ -99,7 +99,7 @@ class NeoSpider:
         2: Left, 왼쪽으로
         3: Right, 오른쪽으로
         4: Backward, 뒤로
-        ex) move(1, 3) -> 앞으로 3초간 이동
+        ex) move_secs(1, 3) -> 앞으로 3초간 이동
         """
         direct = int(direct) if 0 < direct < 5 else 0
         self.__data_list[6][0] = direct
