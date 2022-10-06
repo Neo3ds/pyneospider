@@ -305,14 +305,14 @@ class NeoSpider:
         """
         return self.__gas_value
 
-    def get_left_infared(self):
+    def get_left_infrared(self):
         """
         : 왼쪽 적외선 센서값 가져오기
         @return __left_inf_value
         """
         return self.__left_inf_value
 
-    def get_right_infared(self):
+    def get_right_infrared(self):
         """
         : 오른쪽 적외선 센서값 가져오기
         @return __right_inf_value

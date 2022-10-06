@@ -377,19 +377,19 @@ ns.close()
 
 :warning:INPUT 모듈은 GAS 모듈과 동일한 핀을 사용하고 있습니다. 2개를 동시에 사용하면 올바르지 못한 값을 가져올 수 있습니다.
 
-#### 6. get_left_infared
+#### 6. get_left_infrared
 
 왼쪽 적외선 센서의 감지를 했는지 결과를 리턴합니다. (감지시 True / 미감지시 False)
 
-#### 7. get_right_infared
+#### 7. get_right_infrared
 
 오른쪽 적외선 센서가 감지를 했는지 결과를 리턴합니다. (감지시 True / 미감지시 False)
 
-#### 8. get_ultrasonic()
+#### 8. get_ultrasonic
 
 초음파 센서가 감지한 거리값을 가져옵니다. (단위 cm / 소수점 2자리까지 허용)
 
-#### 9. get_motion()
+#### 9. get_motion
 
 모션 센서가 감지 했는지 결과를 리턴합니다. (감지시 True / 미감지시 False)
 
