@@ -245,9 +245,12 @@ class NeoSpider:
                                 self.__gas_value = (data_list[1][0] << 8) + (data_list[2][0] & 255)
                                 self.__cds_value = (data_list[3][0] << 8) + (data_list[4][0] & 255)
                                 temp_value = (data_list[5][0] << 8) + (data_list[6][0] & 255)
-                                temp_value = math.log((10240000 / temp_value) - 10000)
-                                temp_value = 1 / (0.001129148 + (0.000234125 * temp_value) + (0.0000000876741 * temp_value * temp_value * temp_value))
-                                self.__temp_value = round(temp_value - 273.15 - 4.0, 2) # Downsize temperature
+                                try:
+                                    temp_value = math.log((10240000 / temp_value) - 10000)
+                                    temp_value = 1 / (0.001129148 + (0.000234125 * temp_value) + (0.0000000876741 * temp_value * temp_value * temp_value))
+                                    self.__temp_value = round(temp_value - 273.15 - 4.0, 2) # Downsize temperature
+                                except (ValueError, ZeroDivisionError):
+                                    self.__temp_value = -1
                                 self.__vibe_value = (data_list[7][0] << 8) + (data_list[8][0] & 255)
                                 self.__left_inf_value = data_list[9][0]
                                 self.__right_inf_value = data_list[10][0]
