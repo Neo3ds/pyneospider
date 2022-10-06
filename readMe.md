@@ -4,7 +4,7 @@
 
 ## INSTALL
 
-Python 3버전을 기준으로 작성되었으며, 설치해야하는 패키지는 다음과 같습니다.
+Python 3버전(>=3.6)을 기준으로 작성되었으며, 설치해야하는 패키지는 다음과 같습니다.
 
 ```bash
 $ pip install pyserial
